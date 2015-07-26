@@ -2,7 +2,19 @@
 
 **This code book summarizes the resulting data fields in tidyData.txt.**
 
-## Observation Identifiers
+## Overview of the original data
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+### Notes
+Features were normalized and bounded within [-1,1].
+
+## The tidy data
+Each column contains the average of the mean and standard deviation measurements in the original dataset.
+
+
+### Observation Identifiers
 
 * **subject**
 
@@ -11,10 +23,10 @@
 
 	The type of activity performed when the corresponding measurements were taken
 
-## Measurements
+### Measurements
 All the measurements are means corresponding to the complete set of measurements taken for that variable during the study. Variable names starting with a **t** were taken on the time domain and measurements having an **f** as a prefix were taken on the frequency domain.
 
-### Measurements on the time domain
+#### Measurements on the time domain
 
 * **tBodyAccMeanX**
 
@@ -176,7 +188,7 @@ All the measurements are means corresponding to the complete set of measurements
 
 	Gyroscope Jerk Vector Magnitude Standard Deviation
 
-### Measurements on the frequency domain
+#### Measurements on the frequency domain
 * **fBodyAccMeanX**
 
 	Body Acceleration Signal Mean on the X direction
@@ -333,7 +345,7 @@ All the measurements are means corresponding to the complete set of measurements
 
 	Weighted average of the frequency magnitude to obtain a mean frequency of the gyroscope jerk signal
 
-## Activity Labels
+### Activity Labels
 
 * **WALKING (value 1)**: subject was walking during the test
 * **WALKING_UPSTAIRS (value 2)**: subject was walking up a staircase during the test
