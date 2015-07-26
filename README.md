@@ -60,5 +60,6 @@ If we look at the first few lines and columns of the tidy data:
 
 We can see that it uses descriptive activity names to name the activities in the data set and appropriately labels the data set with descriptive variable names, such as tBodyAccMeanX, tBodyAccMeanY, etc.
 
-## The code book for the tidy data is described in the CodeBook.md file.
+## The code book 
+The code book for the tidy data is described in the CodeBook.md file.
 
